@@ -28,7 +28,7 @@
         document.getElementById("submitForm").addEventListener('click', submitForm);
             
         function getData() {
-        fetch('http://mysite.itvarsity.org/api/fetch/get-data/')
+        fetch('https://mysite.itvarsity.org/api/fetch/get-data/')
             .then(function(response){return response.text()
         })
         .then(function(data){
@@ -37,7 +37,7 @@
         }
             
         function getlist() {
-        fetch('http://mysite.itvarsity.org/api/fetch/get-list/')
+        fetch('https://mysite.itvarsity.org/api/fetch/get-list/')
             .then(function(response){return response.json();
         })
         .then(function(data){
@@ -60,7 +60,7 @@
                 
                 form = new FormData(document.querySelector("#myForm"));
                 
-                fetch('http://mysite.itvarsity.org/api/fetch/send-data/',{
+                fetch('https://mysite.itvarsity.org/api/fetch/send-data/',{
                 method: 'POST',
                 headers:{'Accept': 'application/json, */*'},
                 body: form
